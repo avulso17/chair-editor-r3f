@@ -1,0 +1,131 @@
+/* GLOBAL */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background-color: #111;
+}
+
+#root {
+  font-family: "Poppins", sans-serif;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* ::selection {
+  background-color: rgba(red, green, blue, alpha);
+} */
+
+/* CONFIGURATOR */
+
+.configurator {
+  backdrop-filter: blur(12px);
+  background-color: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  padding: 32px;
+  height: fit-content;
+  width: 340px;
+  z-index: 10;
+}
+
+.configurator__title {
+  font-family: "Poppins", sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.configurator__subtitle {
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.configurator__select-box {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.configurator__select-box__buttons-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.configurator__select-box__buttons-wrapper__button-wrap {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: center;
+  width: fit-content;
+}
+
+.configurator__select-box__material-btn,
+.configurator__select-box__color-btn  {
+  cursor: pointer;
+  user-select: none;
+}
+
+.configurator__select-box__label {
+  font-size: 12px;
+  font-family: "Poppins", sans-serif;
+}
+
+.configurator__select-box__material-btn {
+  background-color: transparent;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  padding: 12px 16px;
+  flex: 1;
+  min-width: fit-content;
+  transition: background-color 250ms ease;
+  outline: none;
+}
+
+.configurator__select-box__material-btn:focus {
+  box-shadow: 0 0 0 2px black, 0 0 0 4px white;
+}
+
+
+.configurator__select-box__material-btn[data-active='true'] {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.configurator__select-box__material-btn:hover {
+  background-color: rgba(255, 255, 255, 0.06);
+}
+
+.configurator__select-box__color-btn {
+  border: none;
+  border-radius: 32px;
+  height: 40px;
+  width: 40px;
+}
+
+.configurator__select-box__color-btn[data-active='true'] {
+  box-shadow: 0 0 0 2px black, 0 0 0 4px white;
+}
